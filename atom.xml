@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>韩木丁</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-05-21T09:30:07.033Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>韩木丁</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Link between GF and GMRF</title>
+    <link href="http://example.com/2023/05/21/Link-between-GF-and-GMRF/"/>
+    <id>http://example.com/2023/05/21/Link-between-GF-and-GMRF/</id>
+    <published>2023-05-21T09:18:44.000Z</published>
+    <updated>2023-05-21T09:30:07.033Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源：Lindgren2011</p><h1 id="1-Background"><a href="#1-Background" class="headerlink" title="1 Background"></a>1 Background</h1><p>高斯场（GF）在空间统计中具有重要作用，由均值函数$\mu (.)$和协方差函数$C(.,.)$确定，在分析时具有可解释意义。但是计算上很复杂。高斯马尔科夫随机场（GMRF）因为矩阵的稀疏性便于计算。考虑用GMRF近似GF。</p><h1 id="2-Two-main-results"><a href="#2-Two-main-results" class="headerlink" title="2 Two main results"></a>2 Two main results</h1><p>用有限元方法，将GF表示为一系列基函数的线性组合，系数为GMRF，GF的precision matrix就是GMRF的precision matrix，建模时用GF，计算时用GMRF。</p><h1 id="3-Extensions"><a href="#3-Extensions" class="headerlink" title="3 Extensions"></a>3 Extensions</h1><h2 id="3-1-non-stationary-fields"><a href="#3-1-non-stationary-fields" class="headerlink" title="3.1 non-stationary fields"></a>3.1 non-stationary fields</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源：Lindgren2011&lt;/p&gt;
+&lt;h1 id=&quot;1-Background&quot;&gt;&lt;a href=&quot;#1-Background&quot; class=&quot;headerlink&quot; title=&quot;1 Background&quot;&gt;&lt;/a&gt;1 Background&lt;/h1&gt;&lt;p&gt;高斯场（GF）</summary>
+      
+    
+    
+    
+    
+    <category term="spatial statistics" scheme="http://example.com/tags/spatial-statistics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2023/05/21/hello-world/"/>
+    <id>http://example.com/2023/05/21/hello-world/</id>
+    <published>2023-05-21T08:15:18.644Z</published>
+    <updated>2023-05-21T08:15:18.644Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
