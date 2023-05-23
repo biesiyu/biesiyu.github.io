@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-21T09:30:07.033Z</updated>
+  <updated>2023-05-23T11:33:56.223Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2023/05/21/Link-between-GF-and-GMRF/"/>
     <id>http://example.com/2023/05/21/Link-between-GF-and-GMRF/</id>
     <published>2023-05-21T09:18:44.000Z</published>
-    <updated>2023-05-21T09:30:07.033Z</updated>
+    <updated>2023-05-23T11:33:56.223Z</updated>
     
-    <content type="html"><![CDATA[<p>来源：Lindgren2011</p><h1 id="1-Background"><a href="#1-Background" class="headerlink" title="1 Background"></a>1 Background</h1><p>高斯场（GF）在空间统计中具有重要作用，由均值函数$\mu (.)$和协方差函数$C(.,.)$确定，在分析时具有可解释意义。但是计算上很复杂。高斯马尔科夫随机场（GMRF）因为矩阵的稀疏性便于计算。考虑用GMRF近似GF。</p><h1 id="2-Two-main-results"><a href="#2-Two-main-results" class="headerlink" title="2 Two main results"></a>2 Two main results</h1><p>用有限元方法，将GF表示为一系列基函数的线性组合，系数为GMRF，GF的precision matrix就是GMRF的precision matrix，建模时用GF，计算时用GMRF。</p><h1 id="3-Extensions"><a href="#3-Extensions" class="headerlink" title="3 Extensions"></a>3 Extensions</h1><h2 id="3-1-non-stationary-fields"><a href="#3-1-non-stationary-fields" class="headerlink" title="3.1 non-stationary fields"></a>3.1 non-stationary fields</h2>]]></content>
+    <content type="html"><![CDATA[<p>来源：Lindgren2011</p><h1 id="1-Background"><a href="#1-Background" class="headerlink" title="1 Background"></a>1 Background</h1><p>高斯场（GF）在空间统计中具有重要作用（$\color{red}{怎么个重要作用？Stein1999}$），由均值函数 $\mu$(.) 和协方差函数（CF）$C(.,.)$ （正定函数）确定。$x(\boldsymbol{s})$ 是continuously indexed GF if all finite collections ${x(\boldsymbol{s_i})}$ 的联合分布是高斯的。如果协方差函数只和两点的相对位置有关，则称为平稳的（stationary）；如果协方差函数只和两点之间的欧氏距离有关，则称为各向同性（isotropy）。由于协方差函数要求正定，所以很难能够构造出一个协方差函数。（有点类似于GMRF的精度矩阵，要求正定，所以放宽假设，构造出一个充分非必要的条件，对角占优矩阵，来作为精度矩阵满足正定的要求）。Bochner定理可以帮助构造CF或验证CF是否正定，定理为：$R^d$ 上的函数$k(x)$ 是弱平稳可随机场的协方差函数当且仅当$k(x)$可以表示为有限正定测度上的傅里叶变换（见Rue2005,Ch5）。</p><p>GF在分析时具有可解释意义，可以通过协方差函数解释相关性。（本来研究空间统计或很多方面的统计都是为了研究相关性）但是计算上很复杂，因为GF依赖的是协方差矩阵，通常协方差矩阵都是dense的，因此在进行统计推断时计算复杂度高，如在计算分布时要计算协方差的逆矩阵，以及行列式，而在分解一个$n \times n$的dense矩阵需要$O(n^3)$ （矩阵操作浮点数）。在分层模型推断的时候会出现big n problem，操作很慢或者根本无法进行。针对big n problem，有一些方法，如近似likelihood的方法，或者exact computations的方法，如covariance tapering（就是将那些非常小接近于0的协方差收缩为0，使得协方差矩阵变的sparse）.但是协方差的大小和range有关，另一种方法lattice methods被提出，优于covariance tapering（没看）。基于这种方法，Rue2005研究了GMRF，替代了GF。GMRF是discretely indexed GF。GMRF的理论是基于精度矩阵（稀疏），因此计算cost降低，便于贝叶斯推断后验分布。Rue等用GMRF近似GF（见Rue2005），但是这个是建立在lattice或torus上，而且需要提前确定参数，如用几阶对应的GMRF，类似于GF中的range。</p><p>GF和GMRF各有优势，GF在解释意义上很好，并且在空间中连续，因此适合更广泛的空间统计模型，比如areal data 或者point data，能刻画多种数据，但是计算复杂。基于GMRF计算快，但是GMRF基于的是网格lattice的情况，不能够适用于实际中多种场景，尤其是area data，GMRF刻画的是简单的neighbourhood的情况（$\color{red}{这个还不够清楚}$）。因此如果能结合GF和GMRF，模型构建和解释用GF，模型求解用GMRF，那么就是既符合实际场景，又能够实现快速计算，用GMRF表示GF，并且使得GMRF的精度矩阵和GF中的协方差矩阵在某种意义上很接近（比如范数或者类似于两个分布间的散度）。</p><h1 id="2-Two-main-results"><a href="#2-Two-main-results" class="headerlink" title="2 Two main results"></a>2 Two main results</h1><p>用有限元方法，将GF表示为一系列基函数的线性组合，系数为GMRF，GF的precision matrix就是GMRF的precision matrix，建模时用GF，计算时用GMRF。</p><h1 id="3-Extensions"><a href="#3-Extensions" class="headerlink" title="3 Extensions"></a>3 Extensions</h1><h2 id="3-1-non-stationary-fields"><a href="#3-1-non-stationary-fields" class="headerlink" title="3.1 non-stationary fields"></a>3.1 non-stationary fields</h2>]]></content>
     
     
       
